@@ -52,7 +52,8 @@ header {
   gap: 35px; /* Khoảng cách giữa các mục */
   padding: 0;
   margin: 0;
-  margin-right: 200px; /* Dịch toàn bộ danh sách sang trái */
+  justify-content: flex-end; /* Căn các mục sang phải */
+  margin-right: 35px;
 }
 
 .nav-links li {
