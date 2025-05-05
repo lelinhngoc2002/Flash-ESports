@@ -1,0 +1,191 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Toàn bộ trang */
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  background: black; /* fallback nếu ảnh nền không tải */
+  position: relative;
+  z-index: 0;
+}
+
+/* Nền */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav a {
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin: auto;
+  max-width: 1400px;
+}
+
+.hero-image img {
+  width: 600px;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.hero-text img {
+  text-align: right; /* Căn chữ sang phải */
+  margin-left: auto; /* Đẩy toàn bộ nội dung sang phải */
+  max-width: 550px; /* Giới hạn chiều rộng tối đa */
+}
+
+.registration-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 20px;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: right; /* Căn chữ sang phải */
+  margin-left: auto; /* Đẩy nội dung sang phải */
+  margin-right: 0;
+}
+
+.montserrat-medium {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-family: 'Roboto', sans-serif;
+  text-align: right;
+  font-size: 16px;
+  color: white;
+  max-width: 400px;
+  margin: 20px auto 10px;
+  line-height: 1.5;
+  text-align: right; /* Căn chữ sang phải */
+  margin-left: auto; /* Đẩy nội dung sang phải */
+  margin-right: 0;
+}
+
+.apply-button {
+  background-color: #FFA500; /* màu cam */
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block; /* Đảm bảo nút là một khối riêng */
+  margin-left: auto; /* Đẩy nút sang bên phải */
+  margin-right: 0;
+}
+
+.apply-button:hover {
+  background-color: #e69500; /* đậm hơn khi hover */
+  box-shadow: 0 0 15px 5px rgba(255, 165, 0, 0.6);
+}
+
+/* Trang trí */
+.decorations .decor {
+  position: absolute;
+  width: 50px;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* khoảng cách giữa vòng tròn và logo */
+}
+
+.pink-o {
+  position: relative; /* không cần absolute nữa nếu nằm trong flow */
+  width: 30px; /* hoặc 40px tùy kích thước mong muốn */
+  opacity: 0.7;
+}
+
+.pink-x { top:5%; left: 25%; }
+.pink-square { bottom: 10%; right: 41%; }
+.green-o { bottom: 2%; right: 32%; }
+.green-square { bottom: 120; left: 3%; }
+.green-wiggle { top: 0%; left: 50%; transform: translate(-50%, -50%) scale(2); }
+
+.pink-square, .green-square, .pink-x, .green-wiggle {
+  transition: transform 0.5s ease; /* Thêm hiệu ứng chuyển đổi mượt */
+}
+
+.pink-square:hover, .green-square:hover, .pink-x:hover, .green-wiggle:hover {
+  transform: rotate(360deg); /* Xoay tròn 360 độ khi hover */
+}
+
+/* Footer */
+footer {
+  text-align: right; /* từ text-align: center; */
+  padding: 20px 50px; /* thêm padding để đẩy nội dung ra phải*/
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.website-link {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: white;
+}
+
+.social-icons img {
+  height: 22px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
