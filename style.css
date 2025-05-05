@@ -46,12 +46,29 @@ header {
   height: 50px;
 }
 
-nav a {
-  font-weight: 500;
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 18px;
+.nav-links {
+  list-style: none; /* Loại bỏ dấu chấm đầu dòng */
+  display: flex; /* Hiển thị danh sách theo hàng ngang */
+  gap: 35px; /* Khoảng cách giữa các mục */
+  padding: 0;
+  margin: 0;
+  margin-right: 100px; /* Dịch toàn bộ danh sách sang trái */
+}
+
+.nav-links li {
+  display: inline-block; /* Hiển thị các mục theo hàng ngang */
+}
+
+.nav-links a {
+  text-decoration: none; /* Loại bỏ gạch chân */
+  color: white; /* Màu chữ */
+  font-size: 20px; /* Kích thước chữ */
+  font-weight: bold; /* Chữ đậm */
+  transition: color 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.nav-links a:hover {
+  color: #FFA500; /* Đổi màu khi hover */
 }
 
 /* Hero section */
@@ -161,12 +178,38 @@ nav a {
 .green-square { bottom: 120; left: 3%; }
 .green-wiggle { top: 0%; left: 50%; transform: translate(-50%, -50%) scale(2); }
 
-.pink-square, .green-square, .pink-x, .green-wiggle {
-  transition: transform 0.5s ease; /* Thêm hiệu ứng chuyển đổi mượt */
+
+/*Hiệu ứng xoay vòng*/
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.pink-square:hover, .green-square:hover, .pink-x:hover, .green-wiggle:hover {
-  transform: rotate(360deg); /* Xoay tròn 360 độ khi hover */
+.green-square, .green-wiggle, .pink-square, .pink-x {
+  animation: rotateAnimation 5s linear infinite; /* Xoay liên tục */
+}
+
+/*Hiệu ứng lấp lánh*/
+@keyframes sparkleEffect {
+  0%, 100% {
+    opacity: 0.7;
+    box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.6);
+  }
+}
+
+.green-o, .pink-o {
+  animation: sparkleEffect 2s infinite;
+  background: transparent;
+  border: none;
+  border-radius: 50%; /* 💡 Làm tròn để loại bỏ góc vuông */
 }
 
 /* Footer */
@@ -184,8 +227,37 @@ footer {
   color: white;
 }
 
-.social-icons img {
-  height: 22px;
-  margin: 0 10px;
-  vertical-align: middle;
+.footer-container {
+  text-align: right; /* Căn nội dung sang trái */
+  padding: 20px 50px;
+}
+
+.website-link {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+.social-icons {
+  list-style: none; /* Loại bỏ dấu chấm đầu dòng */
+  display: flex; /* Hiển thị danh sách theo hàng ngang */
+  justify-content: flex-end; /* Căn các icon sang phải */
+  gap: 15px; /* Khoảng cách giữa các icon */
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+}
+
+.social-icons a img {
+  width: 30px; /* Kích thước icon */
+  height: 30px;
+  transition: transform 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2); /* Phóng to icon khi hover */
 }
