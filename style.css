@@ -228,7 +228,7 @@ footer {
 }
 
 .footer-container {
-  margin-right: 135px;
+  text-align: right; /* Căn nội dung sang trái */
   padding: 20px 50px;
 }
 
